@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Planet - Task 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: antiquewhite;
+        }
+
+        .heading{
+            display: flex;
+            justify-content: center;
+        }
+
+        .para {
+            font-size: smaller;
+            display: flex;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 30px 50px 20px 50px;
+        }
+
+        .para p{
+            margin: 10px;
+        }
+
+        .image{
+            display: flex;
+            justify-content: center;
+        }
+
+        .image img {
+            width: 500px;
+            height: 300px;
+            border-radius: 20px;
+        }
+
+        .links{
+            display: flex;
+            justify-content: center;
+        }
+
+        .links a{
+            text-decoration: none;
+            font-size: medium;
+            cursor: pointer;
+
+        }
+
+        .bt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .bt button{
+            width: 120px;
+            height: 30px;
+            border: none;
+            border-radius: 20px;
+            background-color: azure;
+        }
+
+        .bt button:hover{
+            background-color: rgb(23, 200, 200);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="heading">
+            <h1>Apex Planet Task 1 - basic of web development</h1>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum est libero modi officiis nam? Beatae aspernatur non voluptates? Provident sed perspiciatis minus quaerat illo! Saepe repellendus eligendi molestiae blanditiis exercitationem expedita! Accusantium vitae provident nemo repellat minus, sunt ullam accusamus blanditiis iste officia quisquam! At, nostrum iusto. Similique optio dolorum ratione modi magnam nobis velit molestiae expedita, quaerat vitae explicabo, animi adipisci facere, tenetur veniam! Praesentium repellendus dolore sit quidem repudiandae vel a similique neque nostrum est impedit distinctio magnam, quia aliquam, nisi labore quisquam dicta dignissimos veniam voluptatibus enim blanditiis saepe iste! Saepe voluptatibus obcaecati maxime ipsam repellendus, quis cumque sequi suscipit, dicta numquam beatae officia laudantium corrupti deserunt veniam nulla doloribus! Distinctio enim architecto corrupti nemo delectus! Modi tempore ea, eos vel voluptatum hic voluptatibus soluta sapiente cumque tempora praesentium laboriosam omnis ratione! Autem aut possimus, ad cum quos non impedit officia consectetur ut hic placeat asperiores voluptatibus, atque voluptate sapiente fugit minus tempore similique sunt blanditiis? Exercitationem, aliquam eos deserunt qui aut numquam? Sint, voluptates aperiam. Consectetur, consequuntur suscipit dolorem, voluptatum in esse optio labore tempora voluptates aspernatur alias deserunt minima quasi, dolores culpa animi quibusdam debitis amet. Doloremque excepturi, itaque voluptate, soluta vitae magni culpa nostrum nisi incidunt distinctio saepe voluptatum aliquid quisquam. Ullam quibusdam placeat aliquam voluptates minima harum ea pariatur ipsam dolore molestiae! Fugit dolor numquam eos ullam sint maiores illum at! Similique eos quo dolorum sequi explicabo, ut, sint doloremque ducimus maxime odit dolorem voluptatem molestiae doloribus non? Rerum quo quas veritatis et quia quod vitae! Quis maxime unde debitis natus officia, consequatur pariatur qui ut, voluptates voluptatibus odio nemo recusandae? Esse voluptatem eveniet saepe mollitia ab, dicta dolorum animi ex totam nulla veniam consequatur dignissimos rerum quasi, maiores sint, doloremque ullam quam earum reprehenderit numquam dolore? Eligendi praesentium quod repudiandae accusamus vel placeat exercitationem ipsum maiores natus. Commodi dolorum vel at sit magnam doloribus sint placeat reprehenderit quae repellendus, non sequi cupiditate nostrum obcaecati fugit porro, fuga enim expedita reiciendis inventore! Recusandae velit eligendi soluta sunt aliquid laboriosam aut assumenda! Iste ab optio possimus accusamus facilis autem?</p>
+        </div>
+        <div class="image">
+            <img src="../image1.jpg" alt="Italian Trulli">
+        </div>
+        <div class="links">
+            <a href="https://www.google.com">Google</a>
+        </div>
+
+        <div class="bt">
+            <button type="button" id="btn">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click",()=>{
+            alert("Thanks For Clicking The Ckick Me Button!!");
+        })
+
+    </script>
+</body>
+</html>
