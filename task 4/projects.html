@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Projects & To‑Do</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="site-wrapper">
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-brand">Your Name</div>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="grid-2">
+      <div class="card">
+        <h1 class="section-heading">Projects</h1>
+        <p class="section-subtitle">
+          A quick overview of sample projects you can showcase.
+        </p>
+        <ul class="contact-list">
+          <li>Music App – Stream and manage playlists.</li>
+          <li>Event Manager – Event scheduling dashboard.</li>
+          <li>PG Management System – Rental and tenant management.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="section-heading">To‑Do / Notes (localStorage)</h2>
+        <p class="section-subtitle">
+          Add tasks, mark them complete, and keep them saved in your browser.
+        </p>
+        <div class="todo-app">
+          <div class="todo-input-row">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Add a new task..."
+            />
+            <button id="add-todo" class="btn btn-primary"><span>Add</span></button>
+          </div>
+          <div class="todo-filters">
+            <button data-filter="all" class="btn btn-outline"><span>All</span></button>
+            <button data-filter="active" class="btn btn-outline"><span>Active</span></button>
+            <button data-filter="completed" class="btn btn-outline">
+              Completed
+            </button>
+          </div>
+          <div id="todo-list" class="todo-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    To‑Do list persists using localStorage in your browser.
+  </footer>
+</div>
+<script src="todo.js"></script>
+</body>
+</html>

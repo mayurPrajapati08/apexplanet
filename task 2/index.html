@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Palnet - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div class="page-grid">
+
+        <!-- header -->
+        <header class="header">
+            <h1>My Mini JavaScript Project</h1>
+        </header>
+
+        <!-- navbar -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#contact-form">Contact Form</a></li>
+                <li><a href="#todo-list">To-do List</a></li>
+            </ul>
+        </nav>
+
+        <main class="main">
+
+            <!-- contact form section -->
+            <section id="contact-form" class="card">
+                <h2>Contact Form</h2>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" />
+                        <small class="error-msg" id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" />
+                        <small class="error-msg" id="emailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                        <small class="error-msg" id="messageError"></small>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                    <p class="success-msg" id="successMsg"></p>
+
+                </form>
+            </section>
+
+            <!-- to-do list section -->
+            <section id="todo-list" class="card">
+                <h2>To-do List (DOM)</h2>
+                <div class="todo-input-wrapper">
+                    <input type="text" id="todoInput" placeholder="Enter A Task..."/>
+                    <button id="addTodoBtn" class="btn">Add Task</button>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+            </section>
+        </main>
+
+        <!-- Sidebar (just to show Grid area) -->
+        <aside class="sidebar card">
+            <h2>Info</h2>
+            <p>Contact form with validation and a dynamic to-do list.</p>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 My Project</p>
+        </footer>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

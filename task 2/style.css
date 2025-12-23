@@ -1,0 +1,316 @@
+:root {
+    --bg: #0f172a;
+    /* dark slate */
+    --bg-soft: #111827;
+    --card-bg: #0b1120;
+    --primary: #38bdf8;
+    /* sky blue */
+    --primary-dark: #0ea5e9;
+    --accent: #f97316;
+    /* orange for highlights */
+    --text: #e5e7eb;
+    /* light gray */
+    --muted: #9ca3af;
+    /* muted text */
+    --error: #f97373;
+    --success: #22c55e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* GRID LAYOUT FOR PAGE AREAS */
+.page-grid {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main sidebar"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 100vh;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Areas */
+.header {
+    grid-area: header;
+    background: var(--bg-soft);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav {
+    grid-area: nav;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    /* FLEXBOX FOR CONTENT */
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--bg-soft);
+    color: #fff;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+/* NAV FLEXBOX */
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav-list a:hover {
+  background-color: rgba(56, 189, 248, 0.12); /* soft blue highlight */
+  color: var(--text);                          /* brighter text */
+  transform: translateY(-1px);
+}
+
+/* CARD STYLING */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+/* FORM STYLES */
+.form-group {
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: #020617;
+    color: var(--text);
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    padding: 0.55rem 0.7rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.8);
+    transform: translateY(-1px);
+    background: #020617;
+}
+
+/* VALIDATION MESSAGES */
+.error-msg {
+    color: var(--error);
+    font-size: 0.8rem;
+    height: 0.9rem;
+}
+
+.success-msg {
+    color: var(--success);
+    margin-top: 0.5rem;
+    min-height: 1rem;
+}
+
+.required {
+    color: #e00000;
+}
+
+.btn {
+    position: relative;
+    background: var(--primary);
+    color: #0b1120;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.35);
+    transition:
+        background 0.25s ease,
+        transform 0.18s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(56, 189, 248, 0.45);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 8px 18px rgba(56, 189, 248, 0.3);
+}
+
+
+/* TO-DO LIST STYLES */
+.todo-input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.todo-input-wrapper input {
+    flex: 1;
+}
+
+.todo-list {
+  list-style: none;
+  margin-top: 0.25rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #020617;
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.9);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 1);
+  border-color: rgba(56, 189, 248, 0.6);
+  background: #020817;
+}
+
+.todo-text {
+  flex: 1;
+  margin-right: 0.75rem;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.todo-remove {
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  color: #fecaca;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    border-color 0.2s ease;
+}
+
+.todo-remove:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(248, 113, 113, 0.9);
+  color: #fee2e2;
+  transform: translateY(-1px);
+}
+
+
+
+/* RESPONSIVE BREAKPOINTS WITH MEDIA QUERIES */
+@media (max-width: 900px) {
+    .page-grid {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .todo-input-wrapper {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

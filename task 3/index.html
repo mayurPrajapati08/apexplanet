@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Planet - Task 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+    <h1>Advanced Styling and JavaScript</h1>
+    <p>Responsive design, interactive quiz, and live jokes API.</p>
+  </header>
+
+  <main class="grid-layout">
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="card">
+      <h2>JavaScript Basics Quiz</h2>
+      <p class="section-desc">
+        Answer the questions and submit to see your score.
+      </p>
+      <div id="quiz"></div>
+      <button id="submit-quiz" class="btn primary">Submit Quiz</button>
+      <p id="quiz-result" class="result-text"></p>
+    </section>
+
+    <!-- Joke API Section -->
+    <section id="api-section" class="card">
+      <h2>Random Programming Joke</h2>
+      <p class="section-desc">
+        Click the button to fetch a fresh joke from a public API.
+      </p>
+      <button id="load-joke" class="btn secondary">Get Joke</button>
+      <div id="joke-box">
+        <p id="joke-text">Press the button to load a joke.</p>
+      </div>
+    </section>
+
+    <!-- Info / Showcase Section -->
+    <section id="info-section" class="card">
+      <h2>Responsive Design Demo</h2>
+      <p>
+        Resize the browser window to see how the layout adapts for mobile,
+        tablet, and desktop using CSS Grid and media queries.
+      </p>
+      <ul class="feature-list">
+        <li>Grid-based layout for main content.</li>
+        <li>Breaks into single column on small screens.</li>
+        <li>Buttons and text scale for touch devices.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
